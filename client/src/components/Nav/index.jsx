@@ -1,35 +1,53 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faUser, faPersonThroughWindow, faToilet, faPoo } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-column">
+        <ul className="nav-form">
           <li>
-            <FontAwesomeIcon icon="fa-solid fa-bars" />
+            <FontAwesomeIcon icon={ faBars } />
           </li>
           <li>
-            <FontAwesomeIcon icon="fa-solid fa-user" />
+            <Link to='/me'><FontAwesomeIcon icon={ faUser } /></Link>
           </li>
           <li>
-            <FontAwesomeIcon icon="fa-solid fa-person-through-window" />
+            <a href='/' onClick={() => Auth.logout()}> 
+            <FontAwesomeIcon icon={ faPersonThroughWindow } />
+            </a>
           </li>
         </ul>
       );
     } else {
       return (
-        <ul className="flex-column">
+        <ul className="nav-form">
           <li>
-            <FontAwesomeIcon icon="fa-solid fa-toilet" />
+            <Link to="/login"><FontAwesomeIcon icon={ faToilet } /></Link>
           </li>
           <li>
-            <FontAwesomeIcon icon="fa-solid fa-poo" />
+            <Link to="/login"><FontAwesomeIcon icon={ faPoo } /></Link>
           </li>
         </ul>
       );
     }
   }
-}
 
+  return (
+    <header className="nav-form nav-fixed">
+      <h1>
+        <Link to="/">
+          <span role="icon" href="/favicon.ico"></span>
+        </Link>
+      </h1>
+
+      <nav>
+        {showNavigation()}
+      </nav>
+    </header>
+  );
+}
 export default Nav;
