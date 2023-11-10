@@ -1,3 +1,7 @@
 import{
-    UPDATE_POST
+    UPDATE_POST,
+    UPDATE_COMMENT,
+    UPDATE_CATEGORIES,
+    UPDATE_CURRENT_CATEGORY,
+    TOGGLE_DONATION
 } from "./actions";
