@@ -3,61 +3,55 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUser, faPersonThroughWindow, faToilet, faPoo } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faUser, faPersonThroughWindow, faToilet, faPoo } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <ul className="nav-form">
-        <ul className="nav-form">
           <li>
-            <FontAwesomeIcon icon={ faBars } />
-            <FontAwesomeIcon icon={ faBars } />
+            <p><FontAwesomeIcon icon={ faBars } size="2xl" style={{color : "#ABC4AB"}}/></p>
           </li>
           <li>
-            <Link to='/me'><FontAwesomeIcon icon={ faUser } /></Link>
-            <Link to='/me'><FontAwesomeIcon icon={ faUser } /></Link>
+            <p>
+            <Link to='/me' className="nav-fontawsome"><FontAwesomeIcon icon={ faUser } size="2xl" style={{color : "#ABC4AB"}}/></Link>
+            </p>
           </li>
           <li>
-            <a href='/' onClick={() => Auth.logout()}> 
-            <FontAwesomeIcon icon={ faPersonThroughWindow } />
+            <p><a href='/' onClick={() => Auth.logout()}> 
+            <FontAwesomeIcon icon={ faPersonThroughWindow } size="2xl" style={{color : "#ABC4AB"}}/>
             </a>
-            <a href='/' onClick={() => Auth.logout()}> 
-            <FontAwesomeIcon icon={ faPersonThroughWindow } />
-            </a>
+            </p>
           </li>
         </ul>
       );
     } else {
       return (
         <ul className="nav-form">
-        <ul className="nav-form">
           <li>
-            <Link to="/login"><FontAwesomeIcon icon={ faToilet } /></Link>
-            <Link to="/login"><FontAwesomeIcon icon={ faToilet } /></Link>
+            <p>
+            <Link to="/login"><FontAwesomeIcon icon={ faToilet } size="2xl" style={{color : "#ABC4AB"}}/></Link>
+            </p>
           </li>
           <li>
-            <Link to="/login"><FontAwesomeIcon icon={ faPoo } /></Link>
-            <Link to="/login"><FontAwesomeIcon icon={ faPoo } /></Link>
+            <p>
+            <Link to="/login"><FontAwesomeIcon icon={ faPoo } size="2xl" style={{color : "#ABC4AB"}}/></Link>
+            </p>
           </li>
         </ul>
       );
     }
   }
-
+  
   return (
     <header className="nav-form nav-fixed">
-      <h1>
-        <Link to="/">
-
-
+      <h1 className="hh-h1">
+        <Link to="/" className="hh-h1">
+          HH
         </Link>
       </h1>
 
-      <nav>
+      <nav className="main-nav">
         {showNavigation()}
       </nav>
     </header>

@@ -22,7 +22,7 @@ const SinglePost = () => {
     }
 
     return (
-        <div>
+        <div className="post-container">
             <div className="card mb-3">
                 <p className="card-header">
                     <span style={{fontStyle: "italic", fontWeight: "bold"}}>

@@ -52,7 +52,7 @@ const Login = (props) => {
           <form className="flexCol card" onSubmit={handleFormSubmit}>
             <h2 className="center">Login</h2>
             <input
-              className="form-input"
+              className="signup-form-input"
               placeholder="Enter Email"
               name="email"
               type="email"
@@ -60,7 +60,7 @@ const Login = (props) => {
               onChange={handleChange}
             />
             <input
-              className="form-input"
+              className="signup-form-input"
               placeholder="Enter Password"
               name="password"
               type="password"
