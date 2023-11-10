@@ -8,19 +8,15 @@ const Home = () => {
     const posts = data?.posts || [];
 
     return (
-        <div className="container">
-        <div
-          className="post-form"
-        >
-          {<PostForm />}
-        </div>
-        <div className="">
+
+      <div className="box">
+        <div className="center">
           {loading ? (
             <div>Loading...</div>
           ) : (
             <PostList
               posts={posts}
-              title="Some Feed for Posts..."
+              title="Posts"
             />
           )}
         </div>
