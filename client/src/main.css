@@ -110,7 +110,9 @@
     padding: 10px;
 }
 
-.form-input {
+
+.signup-form-input {
+    background-color: var(--light-green);
     border: 1px solid var(--dark-green);
     border-radius: 5px;
     box-shadow: 0 0 5px var(--dark-green);
@@ -153,5 +155,137 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.post-form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-green);
+}
+
+.nav-fixed{
+    position: fixed;
+    left: 0;  
+    top: 0;
+    bottom: 0;
+    background-color: var(--brown);
+    width: 100px;
+}
+
+.nav-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-green);
+}
+
+.container{
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.post-form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-green);
+}
+
+.nav-fixed{
+    position: fixed;
+    left: 0;  
+    top: 0;
+    bottom: 0;
+    background-color: var(--brown);
+    width: 100px;
+}
+
+.nav-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+.main-form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-green);
+}
+
+.container{
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-container{
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    resize: none;
+    border: 1px solid var(--brown);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--brown);
+    height: 100px;
+    background-color: var(--light-green);
+    margin: auto;
+    width: 95%;
+}
+
+.character-counter{
+    margin: 15px 15px 15px 18.953px;
+}
+
+.comment-form-container{
+    margin-top: 25px;
+    border: 1px solid var(--brown);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--brown);
+}
+
+.submit-button{
+    margin: 15px 15px 15px 18.953px;
+}
+
+.hh-h1{
+    color: var(--light-green); 
+}
+
+.comment-card{
+    margin-top: 25px;
+    border: 1px solid var(--brown);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--brown);
+}
+
+.inside-comment-card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-fontawsome{
+    size: 50px;
 }
 

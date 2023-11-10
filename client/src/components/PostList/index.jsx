@@ -11,7 +11,7 @@ const PostList = ({
   }
 
   return (
-    <div>
+    <div className='post-container'>
       {showTitle && <h3>{title}</h3>}
       {posts &&
         posts.map((Post) => (

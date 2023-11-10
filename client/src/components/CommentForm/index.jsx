@@ -41,11 +41,11 @@ const CommentForm = ({ }) => {
   };
 
   return (
-    <div>
+    <div className="comment-form-container">
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
+            className={`character-counter ${
               characterCount === 250 || error ? "text-error" : ""
             }`}
           >
@@ -53,18 +53,18 @@ const CommentForm = ({ }) => {
             {error && <span className="ml-2">{error.message}</span>}
           </p>
           <form
-            className="flex-row justify-center justify-space-between-md align-stretch"
+            className="comment-form"
             onSubmit={handleFormSubmit}
           >
             <textarea
               name="commentText"
               placeholder="Leave a comment..."
               value={commentText}
-              className="form-input col-12 col-md-9"
+              className="form-input"
               onChange={handleChange}
             ></textarea>
 
-            <button className="btn col-12 col-md-3" type="submit">
+            <button className="submit-button" type="submit">
               Submit
             </button>
           </form>
