@@ -210,10 +210,11 @@
 .hh-h1{
     color: var(--light-green);
     text-decoration: none; 
-}
+
 
 .hh-h1:hover{
     color: var(--black);
+}
 
 .comment-card {
   margin-top: 25px;
