@@ -4,7 +4,6 @@ import { useMutation } from '@apollo/client';
 
 import { ADD_POST } from '../../utils/mutations';
 import { QUERY_POSTS, QUERY_ME } from '../../utils/queries';
-
 import Auth from '../../utils/auth';
 
 const PostForm = () => {

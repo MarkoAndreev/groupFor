@@ -10,17 +10,6 @@ function Nav() {
       return (
         <ul className="nav-form">
           <li>
-<<<<<<< HEAD
-            <FontAwesomeIcon icon={ faBars } />
-          </li>
-          <li>
-            <Link to='/me'><FontAwesomeIcon icon={ faUser } /></Link>
-          </li>
-          <li>
-            <a href='/' onClick={() => Auth.logout()}> 
-            <FontAwesomeIcon icon={ faPersonThroughWindow } />
-            </a>
-=======
             <p><FontAwesomeIcon icon={ faBars } size="2xl" style={{color : "#ABC4AB"}}/></p>
           </li>
           <li>
@@ -33,7 +22,6 @@ function Nav() {
             <FontAwesomeIcon icon={ faPersonThroughWindow } size="2xl" style={{color : "#ABC4AB"}}/>
             </a>
             </p>
->>>>>>> 3998596 (lots of css)
           </li>
         </ul>
       );
@@ -41,12 +29,6 @@ function Nav() {
       return (
         <ul className="nav-form">
           <li>
-<<<<<<< HEAD
-            <Link to="/login"><FontAwesomeIcon icon={ faToilet } /></Link>
-          </li>
-          <li>
-            <Link to="/login"><FontAwesomeIcon icon={ faPoo } /></Link>
-=======
             <p>
             <Link to="/login"><FontAwesomeIcon icon={ faToilet } size="2xl" style={{color : "#ABC4AB"}}/></Link>
             </p>
@@ -55,7 +37,6 @@ function Nav() {
             <p>
             <Link to="/login"><FontAwesomeIcon icon={ faPoo } size="2xl" style={{color : "#ABC4AB"}}/></Link>
             </p>
->>>>>>> 3998596 (lots of css)
           </li>
         </ul>
       );
@@ -64,15 +45,9 @@ function Nav() {
   
   return (
     <header className="nav-form nav-fixed">
-<<<<<<< HEAD
-      <h1>
-        <Link to="/">
-          
-=======
       <h1 className="hh-h1">
         <Link to="/" className="hh-h1">
           HH
->>>>>>> 3998596 (lots of css)
         </Link>
       </h1>
 

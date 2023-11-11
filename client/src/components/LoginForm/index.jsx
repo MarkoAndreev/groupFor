@@ -42,55 +42,16 @@ const Login = (props) => {
 
   return (
     <main className="">
-
-          <h4 className="">Login</h4>
-          <div className="">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="button"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-      {/* <h4 className="center">Login</h4> */}
       <div className="flexCol">
         {data ? (
           <p>
             Success! You may now head <Link to="/">back to the homepage.</Link>
           </p>
         ) : (
-          <form className="flexCol card" onSubmit={handleFormSubmit}>
+          <form className="flexCol login-card" onSubmit={handleFormSubmit}>
             <h2 className="center">Login</h2>
             <input
-
               className="signup-form-input"
-
               placeholder="Enter Email"
               name="email"
               type="email"
@@ -99,9 +60,6 @@ const Login = (props) => {
             />
             <input
               className="signup-form-input"
-
-              className="form-input"
-
               placeholder="Enter Password"
               name="password"
               type="password"
@@ -121,6 +79,7 @@ const Login = (props) => {
       </div>
     </main>
   );
-};
+}
+
 
 export default Login;
