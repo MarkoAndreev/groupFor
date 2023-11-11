@@ -48,13 +48,13 @@ const PostForm = () => {
   };
 
   return (
-    <div>
+    <div className='post-form-inside'>
       <h3>What's on your techy mind?</h3>
 
       {Auth.loggedIn() ? (
         <>
           <p
-            className={`m-0 ${
+            className={`character-count ${
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
@@ -64,7 +64,7 @@ const PostForm = () => {
             className=""
             onSubmit={handleFormSubmit}
           >
-            <div className="">
+            <div className="post-desc-textarea">
               <textarea
                 name="postDesc"
                 placeholder="New post..."
@@ -75,22 +75,22 @@ const PostForm = () => {
               ></textarea>
             </div>
 
-            <div className="">
-              <button className="" type="submit">
-                Add Post
+            <div className="submit-button-container">
+              <button className="submit-button" type="submit">
+                <p>Add Post</p>
               </button>
             </div>
             {error && (
               <div className="">
-                {error.message}
+                Description Needed for Post!
               </div>
             )}
           </form>
         </>
       ) : (
-        <p>
+        <p className='log-in-message'>
           You need to be logged in to share your posts. Please{' '}
-          <Link to="/login">login</Link> or <Link to="/signup">Signup</Link>
+          <Link to="/login" className='login-link-text'>Login</Link> or <Link to="/signup" className='login-link-text'>Signup</Link>
         </p>
       )}
     </div>
