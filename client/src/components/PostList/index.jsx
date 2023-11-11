@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { UPDATE_POST, REMOVE_POST } from "../../utils/actions";
+// import { UPDATE_POST, REMOVE_POST } from "../../utils/actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faComment } from "@fortawesome/free-solid-svg-icons";
+import LikeButton from '../LikeButton';
 
 const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
   if (!posts.length) {
@@ -50,8 +51,10 @@ const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
               <small>{Post.createdAt}</small>
              
               <hr />
-              <Link to={`/Posts/${Post._id}`} ><FontAwesomeIcon icon={ faUser } style={{color : "var(--brown"}}/>
+              <Link to={`/Posts/${Post._id}`} ><FontAwesomeIcon icon={ faComment } style={{color : "var(--brown"}}/>
               </Link>
+              <LikeButton />
+              
               
             </div>
           ))}

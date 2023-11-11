@@ -169,6 +169,22 @@ const resolvers = {
       }
       throw new Error("Oh no something went wrong");
     },
+    likePost: async (parent, { postId }, context) => {
+      if (context.user) {
+        return Post.findOneAndUpdate(
+          { _id: postId },
+          {
+            $inc: {
+              likes: 1,
+            },
+          },
+          {
+            new: true,
+          }
+        );
+      }
+      throw AuthenticationError;
+    },
   },
 };
 

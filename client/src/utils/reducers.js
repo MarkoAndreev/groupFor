@@ -51,6 +51,20 @@ export const reducer = (state, action) => {
                 ...state,
                 donateOpen: !state.donateOpen
             };
+
+        case LIKE_POST:
+            return {
+                ...state,
+                posts: state.posts.map((post) => {
+                    if (post._id === action.payload._id) {
+                        return {
+                            ...post,
+                            likes: [...action.payload.likes],
+                        };
+                    }
+                    return post;
+                }),
+            };
         
         default:
             return state;
