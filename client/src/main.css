@@ -158,7 +158,6 @@
     margin-top: 35px;
 }
 
-
 .post-container {
   width: 85%;
   max-width: 1200px;
@@ -216,16 +215,17 @@
     color: var(--black);
 }
 
-.comment-card{
-    margin-top: 25px;
-    border: 1px solid var(--brown);
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--brown);
+
+.comment-card {
+  margin-top: 25px;
+  border: 1px solid var(--brown);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--brown);
 }
 
-.inside-comment-card{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.inside-comment-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .post-form-inside{

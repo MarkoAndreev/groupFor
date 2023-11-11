@@ -13,6 +13,7 @@ const typeDefs = `
     postAuthor: String!
     createdAt: String
     comments: [Comment]!
+    likes: Int
   }
 
   type Comment {
@@ -46,6 +47,9 @@ const typeDefs = `
     updateComment(postId: ID!, commentId: ID!, commentText: String!): Post
     updateUser(userId: ID!, username: String!, email: String!): User
     updatePassword(userId: ID!, password: String!): User
+    
+    likePost(postId: ID!): Post
+    
   }
 `;
 

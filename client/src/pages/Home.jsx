@@ -1,6 +1,5 @@
 import { useQuery } from '@apollo/client';
 import PostList from '../components/PostList';
-import PostForm from '../components/PostForm';
 import { QUERY_POSTS } from '../utils/queries';
 
 const Home = () => {
@@ -8,19 +7,14 @@ const Home = () => {
     const posts = data?.posts || [];
 
     return (
-        <div className="container">
-        <div
-          className="post-form"
-        >
-          {<PostForm />}
-        </div>
+      <div className="main-div">
         <div className="">
           {loading ? (
             <div>Loading...</div>
           ) : (
             <PostList
               posts={posts}
-              title="Some Feed for Posts..."
+              title="Newest Posts"
             />
           )}
         </div>

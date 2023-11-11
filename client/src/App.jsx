@@ -38,9 +38,11 @@ function App() {
                 <Nav />
 
                 <div className="outlet">
+                  
                 <Outlet />
+                  
                 </div>
-                
+              
         </ApolloProvider>
     );
 }
