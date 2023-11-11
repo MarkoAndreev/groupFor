@@ -1,4 +1,7 @@
+import { UPDATE_COMMENT, REMOVE_COMMENT } from "../../utils/actions";
+
 const CommentList = ({ comments = [] }) => {
+  
   if (!comments.length) {
     return <h3>🦗 *cricket noises*</h3>;
   }

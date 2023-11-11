@@ -16,12 +16,24 @@ export const reducer = (state, action) => {
                 post: [...action.post]
             };
     
+        case REMOVE_POST:
+            return {
+                ...state,
+                posts: state.posts.filter((post) => post._id !== action.payload)
+            };
+
         case UPDATE_COMMENT:
             return {
                 ...state,
                 comment: [...action.comment]
             };
 
+        case REMOVE_COMMENT:
+            return {
+                ...state,
+                comment: state.comments.filter((comment) => comment._id !== action.payload)
+            };
+        
         case UPDATE_CATEGORIES:
             return {
                 ...state,
@@ -34,18 +46,6 @@ export const reducer = (state, action) => {
                 currentCategory: action.currentCategory
             };
 
-        case REMOVE_POST:
-            return {
-                ...state,
-                posts: state.posts.filter((post) => post._id !== action.payload)
-            };
-
-        case REMOVE_COMMENT:
-            return {
-                ...state,
-                comment: state.comments.filter((comment) => comment.id !== action.payload)
-            };
-        
         case TOGGLE_DONATION:
             return {
                 ...state,
