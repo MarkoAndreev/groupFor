@@ -209,7 +209,7 @@
 .hh-h1{
     color: var(--light-green);
     text-decoration: none; 
-
+}
 
 .hh-h1:hover{
     color: var(--black);
@@ -286,7 +286,6 @@
 
 .post {
   flex: 1 1 auto; /* grow | shrink | basis */
-
   margin: 2%;
   max-width: 30%;
   max-height: fit-content;
