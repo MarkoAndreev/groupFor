@@ -6,7 +6,7 @@ import Signup from '../components/SignupForm';
 const LoginSignup = () => {
 
   return (
-    <main>
+    <main className='full-width'>
       <div className="flexBox">
         <div
           className=""
